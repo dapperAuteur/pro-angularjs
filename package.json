@@ -1,0 +1,19 @@
+{
+  "name": "pro-angularjs",
+  "version": "1.0.0",
+  "description": "pro angularjs 1 tutorials",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dapperAuteur/pro-angularjs.git"
+  },
+  "author": "awefulBrown",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dapperAuteur/pro-angularjs/issues"
+  },
+  "homepage": "https://github.com/dapperAuteur/pro-angularjs#readme"
+}
