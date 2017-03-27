@@ -6,7 +6,8 @@
     <link href="css/bootstrap-theme.css" rel="stylesheet" />
     <link type="text/javascript" href="/scripts/bootstrap.js">
     <script src="./scripts/angular.js"></script>
-    <script src="./scripts/angular-route.js"></script>
+    <script src="angular-OLD.js"></script>
+    <!-- <script src="./scripts/angular-route.js"></script> -->
     <script src="./scripts/angular-resource.js"></script>
     <script src="./scripts/ui-bootstrap-tpls-2.5.0.js"></script>
     <script src="./scripts/angular-ui-router.min.js"></script>
@@ -17,21 +18,21 @@
 
       var todoApp = angular.module("todoApp", []);
 
-      // todoApp.run(function ($http) {
-      //   $http.get("todo.json").success(function (data) {
-      //     model.items = data;
-      //     });
-      //   });
       todoApp.run(function ($http) {
-        $http.get("todo.json").then(successCallback, errorCallback);
-        function successCallback (data) {
+        $http.get("todo.json").success(function (data) {
           model.items = data;
-          console.log(data);
-          }
-        function errorCallback (error){
-          console.log("error: ");
-        };
-      });
+          });
+        });
+      // todoApp.run(function ($http) {
+      //   $http.get("todo.json").then(successCallback, errorCallback);
+      //   function successCallback (data) {
+      //     model.items = data;
+      //     console.log(data);
+      //     }
+      //   function errorCallback (error){
+      //     console.log("error: ");
+      //   };
+      // });
 
       todoApp.filter("checkedItems", function () {
         return function (items, showComplete) {
