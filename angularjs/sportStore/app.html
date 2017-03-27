@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="sportsStore">
+
+  <head>
+     <meta charset="UTF-8">
+     <title>SportsStore</title>
+     <script src="./../angular-OLD.js"></script>
+     <link href="./../css/bootstrap.css" rel="stylesheet"/>
+     <link href="./../css/bootstrap-theme.css" rel="stylesheet" />
+     <link type="text/javascript" href="./../scripts/bootstrap.js">
+     <!-- <script src="./../scripts/angular.js"></script> -->
+     <!-- <script src="./scripts/angular-route.js"></script> -->
+     <script src="./../scripts/angular-resource.js"></script>
+     <script src="./../scripts/ui-bootstrap-tpls-2.5.0.js"></script>
+     <script src="./../scripts/angular-ui-router.min.js"></script>
+     <script>
+      angular.module("sportsStore", []);
+     </script>
+     <script src="controllers/sportsStore.js"></script>
+     <meta name="description" content="DESCRIPTION">
+     <!--[if lt IE 9]>
+       <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+     <![endif]-->
+ </head>
+ <body class="container" ng-controller="sportsStoreCtrl">
+   <div class="navbar navbar-inverse">
+     <a class="navbar-brand" href="#">SPORTS STORE</a>
+   </div>
+   <div class="panel panel-default row">
+     <div class="col-xs-3">
+       Categories go here
+     </div>
+     <div class="col-xs-8">
+       <div class="well" ng-repeat="item in data.products">
+         <h3>
+           <strong>{{item.name}}</strong>
+           <span class="pull-right label label-primary">
+             {{item.price | currency}}
+           </span>
+         </h3>
+         <span class="lead">{{item.description}}</span>
+       </div>
+     </div>
+   </div>
+
+ </body>
+
+</html>
